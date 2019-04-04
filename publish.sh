@@ -58,7 +58,7 @@ TIMESTAMP=$(date +"%Y-%m-%d_%H%M%S")
 DIRECTORY_TO_ARCHIVE=${DIRECTORY_TO_ARCHIVE-${WORKING_DIRECTORY}}
 
 # Git
-BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
+BRANCH_NAME=${BRANCH_NAME:-$(git rev-parse --abbrev-ref HEAD)}
 COMMIT_HASH=$(git rev-parse --short HEAD)
 
 # Paths
